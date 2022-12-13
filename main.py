@@ -236,6 +236,11 @@ class BJ_Game(object):
                 player.bust()
 
     def play(self):
+        """
+        The function plays the game by dealing two cards to each player and the dealer, then dealing
+        additional cards to the players, then dealing additional cards to the dealer, and then comparing
+        the players' hands to the dealer's hand.
+        """
         # deal initial 2 card to everyone
         self.deck.deal(self.players + [self.dealer], per_hand = 2)
         self.dealer.flip_first_card() # Hide first card for dealer
@@ -301,8 +306,8 @@ def main():
         again = Player.ask_yes_no("\nDo you want to play again?: ")
 
 
-
-main()
+if __name__ == "__main__":
+    main()
     
 
 
